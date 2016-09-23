@@ -72,6 +72,8 @@ if(${VTK_VERSION_MAJOR} GREATER 5)
     vtkInteractionStyle
     vtkRenderingAnnotation
     vtkRenderingCore
+    vtkRenderingOpenVR
+    vtkRenderingFreeType
     )
   if(TARGET vtkRendering${VTK_RENDERING_BACKEND})
     list(APPEND VTK_LIBRARIES vtkRendering${VTK_RENDERING_BACKEND})

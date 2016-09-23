@@ -503,10 +503,10 @@ ctk_lib_option(Scripting/Python/Widgets
 
 # VTK libraries have not yet been tested with Qt5
 ctk_lib_option(Visualization/VTK/Core
-               "Build the VTK Core library" OFF)
+               "Build the VTK Core library" ON)
 
 ctk_lib_option(Visualization/VTK/Widgets
-               "Build the VTK Widgets library" OFF)
+               "Build the VTK Widgets library" ON)
 
 ctk_lib_option(CommandLineModules/Core
                "Build the Command Line Module core library" OFF)

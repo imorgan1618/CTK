@@ -5,7 +5,6 @@ project(CTKVisualizationVTKWidgets)
 #
 
 set(KIT_export_directive "CTK_VISUALIZATION_VTK_WIDGETS_EXPORT")
-
 #
 # Add the libraries QtTesting
 #
@@ -25,6 +24,9 @@ set(KIT_SRCS
   ctkVTKAbstractView.cpp
   ctkVTKAbstractView.h
   ctkVTKAbstractView_p.h
+  ctkVTKOpenVRAbstractView.cpp
+  ctkVTKOpenVRAbstractView.h
+  ctkVTKOpenVRAbstractView_p.h
   ctkVTKColorTransferFunction.cpp
   ctkVTKColorTransferFunction.h
   ctkVTKCompositeFunction.cpp
@@ -49,6 +51,9 @@ set(KIT_SRCS
   ctkVTKRenderView.cpp
   ctkVTKRenderView.h
   ctkVTKRenderView_p.h
+  ctkVTKOpenVRRenderView.cpp
+  ctkVTKOpenVRRenderView.h
+  ctkVTKOpenVRRenderView_p.h
   ctkVTKScalarBarWidget.cpp
   ctkVTKScalarBarWidget.h
   ctkVTKScalarsToColorsUtils.cpp
@@ -73,6 +78,8 @@ set(KIT_MOC_SRCS
   ctkVTKAbstractMatrixWidget_p.h
   ctkVTKAbstractView.h
   ctkVTKAbstractView_p.h
+  ctkVTKOpenVRAbstractView.h
+  ctkVTKOpenVRAbstractView_p.h
   ctkVTKColorTransferFunction.h
   ctkVTKCompositeFunction.h
   ctkVTKDataSetArrayComboBox.h
@@ -86,6 +93,8 @@ set(KIT_MOC_SRCS
   ctkVTKPropertyWidget.h
   ctkVTKRenderView.h
   ctkVTKRenderView_p.h
+  ctkVTKOpenVRRenderView.h
+  ctkVTKOpenVRRenderView_p.h
   ctkVTKScalarBarWidget.h
   ctkVTKSliceView.h
   ctkVTKSliceView_p.h
@@ -120,6 +129,8 @@ if(${VTK_VERSION_MAJOR} GREATER 5)
     vtkRenderingContext2D
     vtkViewsContext2D
     vtkGUISupportQt
+    vtkRenderingOpenVR
+    vtkRenderingFreeType
     )
     if(CTK_LIB_Scripting/Python/Core AND CTK_LIB_Scripting/Python/Core_PYTHONQT_USE_VTK)
       set(VTK_LIBRARIES ${VTK_LIBRARIES} vtkWrappingPythonCore)
